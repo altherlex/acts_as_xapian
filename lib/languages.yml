@@ -1,0 +1,39 @@
+da:
+  stem: danish
+
+nl:
+  stem: dutch
+
+en:
+  stem: english
+
+fi:
+  stem: finnish
+
+fr:
+  stem: french
+
+de:
+  stem: german
+
+it:
+  stem: italian
+
+'no':
+  stem: norwegian
+
+pt-br:
+  stem: portuguese
+  op:
+    AND: ['E', 'e', '+']
+    OR: ['OU', 'ou']
+    NOT: ['NAO', 'NÃO', 'nao', 'não', '-']
+
+ru:
+  stem: russian
+
+es:
+  stem: spanish
+
+sv:
+  stem: swedish
