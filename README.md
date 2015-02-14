@@ -35,7 +35,7 @@ rake xapian:rebuild_index models="Client" RAILS_ENV=development --trace
 
 ####5- Load indexes often
 
-<pre>rake xapian:update_index RAILS_ENV={ambiente}</pre>
+<pre>rake xapian:update_index RAILS_ENV=development</pre>
 
 #####5.1- ... with Crontab (monthly in day 5)
 
@@ -88,6 +88,7 @@ copied from the README.txt file.
 
 
 a. Introduction to acts_as_xapian
+
 =================================
 
 "Xapian":http://www.xapian.org is a full text search engine library which has
@@ -107,6 +108,7 @@ and initially paid for by the "JRSST Charitable Trust":http://www.jrrt.org.uk/jr
 
 
 b. Installation
+
 ===============
 
 Retrieve the plugin directly from the git version control system by running
@@ -126,13 +128,9 @@ Xapian library and bindings (you don't need Omega).
 There is no Ruby Gem for Xapian, it would be great if you could make one!
 
 
-
-
-
 c. Comparison to acts_as_solr (as on 24 April 2008)
 
 =============================
-
 
 
 * Offline indexing only mode - which is a minus if you want changes
@@ -222,7 +220,6 @@ Ruby bindings are mature and well maintained as part of Xapian.
 d. Documentation - indexing
 
 ===========================
-
 
 
 Xapian is an *offline indexing* search library - only one process can have the
