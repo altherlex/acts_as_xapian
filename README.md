@@ -2,29 +2,28 @@
 
 Library for Xapian and ruby (1.9 and above)
 
-## How use
+## How use (6 steps)
 
-1. Install Xapian: http://xapian.org/docs/install.html
+####1- Install Xapian: http://xapian.org/docs/install.html
 
 
-2. gem 'acts_as_xapian'
+####2- gem 'acts_as_xapian'
 
 <pre>
 echo gem \"acts_as_xapian\", git:\"https://github.com/altherlex/acts_as_xapian\" >> Gemfile
 </pre>
 
 
-3. Create indexes
+####3- Create indexes
 
 <pre>
 rake xapian:rebuild_index models="Client" RAILS_ENV=development --trace
 </pre>
 
-
-4. How use
+####4- How to implement
 
 <pre>
-#in your model
+#into your model
 	acts_as_xapian :texts=> [:id,:full_name],
              :terms => [[:id, 'A', 'id'], [:full_name, 'E', 'nome']],
              :if => [:situation, " == 'A'"]
@@ -34,27 +33,31 @@ rake xapian:rebuild_index models="Client" RAILS_ENV=development --trace
 </pre>
 
 
-5. Load indexes often
+####5- Load indexes often
 
 <pre>rake xapian:update_index RAILS_ENV={ambiente}</pre>
 
-5.1 ... with Crontab
+#####5.1- ... with Crontab (monthly in day 5)
 
 <pre>00-59/5 * * * * cd /var/www/html/myApp && rake xapian:update_index RAILS_ENV=development</pre>
 
 
-6. Testing in rails console
+####6- Testing in rails console
 
 <pre>rake xapian:query models="Client" query="Paul Lopes" </pre>
 
 
 ## shell-script to follow the mounting of indexes
+
 <pre>
 while true;do ls -lah vendor/plugins/acts_as_xapian/xapiandbs/development.new/ | grep total;sleep 10; done;
 </pre>
 
+
 ##TODO
+
 * write tests
+
 ---
 
 The official page for acts_as_xapian is now the Google Groups page.
