@@ -47,8 +47,7 @@ rake xapian:rebuild_index models="Client" RAILS_ENV=development --trace
 <pre>rake xapian:query models="Client" query="Paul Lopes" </pre>
 
 
-## shell-script to follow the mounting of indexes
-
+shell-script to follow the mounting of indexes
 <pre>
 while true;do ls -lah vendor/plugins/acts_as_xapian/xapiandbs/development.new/ | grep total;sleep 10; done;
 </pre>
