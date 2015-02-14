@@ -14,16 +14,10 @@ echo gem \"acts_as_xapian\", git:\"https://github.com/altherlex/acts_as_xapian\"
 </pre>
 
 
-####3- Create indexes
+####3- How to implement
 
 <pre>
-rake xapian:rebuild_index models="Client" RAILS_ENV=development --trace
-</pre>
-
-####4- How to implement
-
-<pre>
-#into your model
+#into your model... app/models/client.rb
 	acts_as_xapian :texts=> [:id,:full_name],
              :terms => [[:id, 'A', 'id'], [:full_name, 'E', 'nome']],
              :if => [:situation, " == 'A'"]
@@ -32,6 +26,11 @@ rake xapian:rebuild_index models="Client" RAILS_ENV=development --trace
   end
 </pre>
 
+####4- Create indexes
+
+<pre>
+rake xapian:rebuild_index models="Client" RAILS_ENV=development --trace
+</pre>
 
 ####5- Load indexes often
 
