@@ -36,7 +36,7 @@ rake xapian:rebuild_index models="Client" RAILS_ENV=development --trace
 
 <pre>rake xapian:update_index RAILS_ENV=development</pre>
 
-#####5.1- ... with Crontab (monthly in day 5)
+#####5.1- ... with Crontab
 
 <pre>00-59/5 * * * * cd /var/www/html/myApp && rake xapian:update_index RAILS_ENV=development</pre>
 
