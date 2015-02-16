@@ -1,3 +1,4 @@
+# encoding: UTF-8
 da:
   stem: danish
 
@@ -27,7 +28,7 @@ pt-br:
   op:
     AND: ['E', 'e', '+']
     OR: ['OU', 'ou']
-    NOT: ['NAO', 'N√O', 'nao', 'n„o', '-']
+    NOT: ['NAO', 'N√ÉO', 'nao', 'n√£o', '-']
 
 ru:
   stem: russian
